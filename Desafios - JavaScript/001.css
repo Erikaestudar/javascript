@@ -1,0 +1,51 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #5D8596;
+    text-align:center;
+    color:beige;
+  }
+
+  header{
+    background: #232E33;
+    color:white;
+    padding:2rem;
+    text-align:center;
+    margin-bottom:2%;
+    font-size:30px;
+  }
+
+  nav a:visited{
+    color:#232E33;
+  }
+
+  ul {
+    list-style: none;
+    font-size:45px;
+  }
+
+  ul li {
+    padding:5%;
+    background:#f4d6f0;
+    margin:30px 0;
+    color:aliceblue;
+  }
+
+  .btn{
+    display:inline;
+    width:33%;
+    height:40%;
+    border:0;
+    background:#43B8EB;
+    color:antiquewhite;
+    border-radius:10px;
+    margin:25px 0;
+    font-size:35px;
+  }
