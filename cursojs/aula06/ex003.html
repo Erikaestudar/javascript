@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiras Variáveis</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 1.3rem Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Superstição do mundo Dev.</p>
+    <!--
+    <form action="" method="get">
+        <p>
+            <label for="inum1">Número 1:</label>
+            <input type="text" name="num1" id="inum1">
+        </p>
+        <p>
+            <label for="inum2">Número 2:</label>
+            <input type="text" name="num2" id="inum1">
+        </p>
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Somar">
+        </p>
+    </form>
+    -->
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))     
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}.`)
+        
+        // (Number + Number) para adição
+        // (String + String) para concatenação
+        
+        /*
+        String > Número
+        Number.parseInt(n) converte para números inteiros
+        Number.parseFloat(n) conveete para números reais (com vírgula)
+
+        Número > String
+        String(n) -- ex. String(s) --
+        n.toString() -- ex. s.toString() --
+
+        Template String
+        `${}`
+        ${} - Place Holder
+        */
+
+        /* 
+        Formatando Strings
+        s.length -- quantos caracteres a string tem --
+        s.toUpperCase() -- tudo para 'MAIÚSCULAS'
+        s.toLowerCase() -- tudo para 'minúsculas'
+        */
+    </script>
+</body>
+</html>

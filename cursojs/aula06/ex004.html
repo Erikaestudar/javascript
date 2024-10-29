@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando String</title>
+    <style>
+        body {
+            font: normal 1.3rem Arial;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá, <strong> ${nome} </strong>! Seu nome tem ${nome.length} letras. </br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.</br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.`)
+
+        /*
+        Formatação de números
+
+        n1.toFixed(2) -- ex. 1545.50 --
+        n1.toFixed(2).replace('.',',') -- ex. 1545,50 --
+        n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) --R$ 1,545.50--
+
+        */
+    </script>
+</body>
+</html>
