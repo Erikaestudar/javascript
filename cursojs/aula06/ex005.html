@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formatação de números</title>
+    <title>Primeiro passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 1.2rem Arial;
+        }
+    </style>
 </head>
 <body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
     <script>
-        var valor = Number(window.prompt('Qual é o seu salário?'))
-        var decimal = valor.toFixed(2)
-        var salario = valor.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
-        var euro = valor.toLocaleString('pt-BR', {style:'currency', currency:'EUR'})
-        document.write(`${decimal}</br>`)
-        document.write(`${salario}</br>`)
-        document.write(euro)
-
-
-        /*
-        Formatação de números
-
-        n1.toFixed(2) -- ex. 1545.50 --
-        n1.toFixed(2).replace('.',',') -- ex. 1545,50 --
-        n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) --R$ 1,545.50--
-
-        */
+        //window.document.write('Olá, Mundo!')
+        //window.document.write(window.document.charset)
+        //window.document.write(window.navigator.appName)
+        //window.document.write(window.document.URL)
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        p1.style.color = 'blue'
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...'
+        //window.document.getElementById('msg').innerText = 'Olá!'
     </script>
 </body>
 </html>

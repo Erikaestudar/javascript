@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de números</title>
+</head>
+<body>
+    <script>
+        var valor = Number(window.prompt('Qual é o seu salário?'))
+        var decimal = valor.toFixed(2)
+        var salario = valor.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+        var euro = valor.toLocaleString('pt-BR', {style:'currency', currency:'EUR'})
+        document.write(`${decimal}</br>`)
+        document.write(`${salario}</br>`)
+        document.write(euro)
+
+
+        /*
+        Formatação de números
+
+        n1.toFixed(2) -- ex. 1545.50 --
+        n1.toFixed(2).replace('.',',') -- ex. 1545,50 --
+        n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) --R$ 1,545.50--
+
+        */
+    </script>
+</body>
+</html>
