@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete</title>
+</head>
+<body>
+    <h1>Enquete</h1>
+    <label for="ipais">Qual país você está morando? </label><input type="text" name="pais" id="ipais" placeholder="Digite seu país">
+    <input id="botao" type="button" value="Verificar" onclick="click()">
+    
+    <div id="res">
+
+    </div>
+    <script>            
+        var pais = document.querySelector('input#ipais') // Seleciona o input pelo ID 'ipais'
+        var botao = document.querySelector('input#botao') // Seleciona o botão pelo ID 'botao' 
+        var res = document.querySelector('div#res') // Seleciona a div para mostrar o resultado
+
+        botao.addEventListener('click', clicar) // Adiciona o evento de clique no botão
+
+        function clicar() {
+             // Verifica o valor do campo 'pais'
+            if (pais.value.trim() === 'Brasil') { // Usando pais.value para acessar o valor digitado
+                res.innerHTML = `<p> Você é Brasileiro(a)</p>.`
+            } else {
+                res.innerHTML = `<p> Você é Estrangeiro(a) 🌎</p>.`
+            }
+        }
+
+        /*
+        pais.value: Obtemos o valor do campo <input> e o comparamos com a string 'Brasil'.
+        trim(): Remove espaços extras, caso o usuário digite espaços antes ou depois do nome.
+        */
+    </script>
+</body>
+</html>
