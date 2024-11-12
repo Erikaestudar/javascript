@@ -30,6 +30,13 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
+.btn {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    text-decoration: none;
+    
+}
 footer {
     color: white;
     font-style: italic;
