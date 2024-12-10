@@ -13,27 +13,38 @@ function clicar() {
         res.innerHTML = 'Impossível Contar!'
         //window.alert('[ERRO] Faltam dados!')
     } else {
-        res.innerHTML =  `Contando: </br>`
+        res.innerHTML =  `Contando `
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
 
-        if (p <= 0) {
-            window.alert('Passo inválido! Considerando PASSO 1')
-            p = 1
-        }
-        if (i < f) {
+        if (i <= 0 && f <= 0){
+            res.innerHTML = 'Impossível Contar!'
+        } else {
+            if (p <= 0) {
+                window.alert('Passo inválido! Considerando PASSO 1')
+                p = 1
+            }
+            if (i < f) {
             //Contagem crescente
+            res.innerHTML += `de <strong>${ini.value}</strong> a <strong>${fim.value}</strong> com o passo de <strong>${p}</strong>: </br>`
             for(let c = i; c <= f; c += p) {
-            res.innerHTML += `${c} \u{1F449}`
+                res.innerHTML += `${c} \u{1F449}`
             }
 
-        } else {
+            } else {
             //Contagem regressiva
+            res.innerHTML += `de <strong>${ini.value}</strong> a <strong>${fim.value}</strong> com o passo de <strong>${p}</strong>: </br>`
             for(let c = i; c >= f; c -= p) {
                 res.innerHTML += `${c} \u{1F449}`
             }
-        }
+            }
         res.innerHTML += `\u{1F3C1}`
+
+        //Vai apagar os campos
+        ini.value = ''
+        fim.value = ''
+        passo.value = ''
     }
+}
 }
