@@ -10,7 +10,7 @@ function clicar() {
 
     // Verificar se está vazio
     if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        res.innerHTML = 'Impossível Contar!'
+        res.innerHTML = 'Impossível Contar! Faltam dados!'
         //window.alert('[ERRO] Faltam dados!')
     } else {
         res.innerHTML =  `Contando `
@@ -18,6 +18,7 @@ function clicar() {
         let f = Number(fim.value)
         let p = Number(passo.value)
 
+        //Verifica se ambos os campos são 0.
         if (i <= 0 && f <= 0){
             res.innerHTML = 'Impossível Contar!'
         } else {
