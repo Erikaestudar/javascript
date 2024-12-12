@@ -34,11 +34,10 @@ div {
     margin: 1rem 0rem;
 }
 
-select {
-    width: 12rem;
-    height: 16rem;
-    display: block;
+label#text {
+    display: none;
 }
+
 footer {
     color: white;
     font-style: italic;

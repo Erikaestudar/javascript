@@ -4,20 +4,21 @@ taBtn.addEventListener('click', clicar)
 
 function clicar(){
     let num = document.getElementById('txtn')
-    let btn = document.getElementById('btn')
-    let tab = document.getElementById('txttab')
     let text = document.getElementById('text')
-    let c = 1
+    let tab = document.getElementById('seltab')
 
     if (num.value.length == 0) {
         window.alert('Comando inválido! Digite um número.')
     } else {
         let n = Number(num.value)
-        text.innerHTML = `Tabuada do <strong>${n}</strong>: </br></br>`
+        let c = 1
+        tab.innerHTML = ''
     
-        for (let c = 0; c <= 10; c++) {
-            let res = n * c
-            text.innerHTML += `${n} x ${c} = <strong>${res}</strong></br>`
+        for (let c = 1; c <= 10; c++) {
+            let item = document.createElement('option')
+            item.text += `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
         }  
     }
     num.value = '' 
