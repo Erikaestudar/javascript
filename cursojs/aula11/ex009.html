@@ -8,7 +8,7 @@
 <body>
     <h1>Enquete</h1>
     <label for="ipais">Qual país você está morando? </label><input type="text" name="pais" id="ipais" placeholder="Digite seu país">
-    <input id="botao" type="button" value="Verificar" onclick="click()">
+    <input id="botao" type="button" value="Verificar">
     
     <div id="res">
 
@@ -22,11 +22,15 @@
 
         function clicar() {
              // Verifica o valor do campo 'pais'
+
+            res.innerHTML = `<p>Vivendo em ${pais.value}.</p>`
+             
             if (pais.value.trim() === 'Brasil') { // Usando pais.value para acessar o valor digitado
-                res.innerHTML = `<p> Você é Brasileiro(a)</p>.`
+                res.innerHTML += `<p> Você é Brasileiro(a).</p>`
             } else {
-                res.innerHTML = `<p> Você é Estrangeiro(a) 🌎</p>.`
+                res.innerHTML += `<p> Você é Estrangeiro(a). 🌎</p>`
             }
+            pais.value = ''
         }
 
         /*
