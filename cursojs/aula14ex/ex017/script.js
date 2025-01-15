@@ -4,14 +4,14 @@ taBtn.addEventListener('click', clicar)
 
 function clicar(){
     let num = document.getElementById('txtn')
-    let text = document.getElementById('text')
+  
     let tab = document.getElementById('seltab')
 
     if (num.value.length == 0) {
         window.alert('Comando inválido! Digite um número.')
     } else {
         let n = Number(num.value)
-        let c = 1
+
         tab.innerHTML = ''
     
         for (let c = 1; c <= 10; c++) {
