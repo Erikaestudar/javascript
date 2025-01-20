@@ -11,20 +11,25 @@
         <h1>Analisador de Números</h1>
     </header>
     <section>
-        <div>
+        <div id="sel">
             <p>
-            <label for="num">Número (entre 1 e 100):</label>
-            <input type="number" name="num" id="num">
-            <input id="addBtn" class="botoes" type="button" value="Adicionar">
+            <label for="fnum">Número (entre 1 e 100):</label>
+            <input type="number" name="fnum" id="fnum">
+            <input id="addBtn" type="button" value="Adicionar">
             </p>
+
+            <p>
+                <label id="list" for="flista">List</label>
+                <select name="flista" id="flista" size="6"></select>
+            </p>
+            <p>
+                <input id="finBtn" type="button" value="Finalizar">
+                <input id="limBtn" type="button" value="Limpar">
+            </p>
+            
         </div>
-        <div id="selres">
-            <label id="sel" for="res">resultados</label>
-            <select name="res" id="res" size="6"></select>
-            <p>
-                <input id="finBtn" class="botoes" type="button" value="Finalizar">
-                <input id="limBtn" class="botoes" type="button" value="Limpar">
-            </p>
+        <div id="res">
+
         </div>
     </section>
     <footer>

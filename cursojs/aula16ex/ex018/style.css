@@ -30,21 +30,17 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-div {
-    padding: 0.65rem;
-}
-
-div#selres {
+div#sel {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
 
-div#selres p {
+div#sel p {
     margin: 0.4rem;
 }
 
-label#sel {
+label#list {
     display: none;
 }
 
@@ -52,9 +48,8 @@ input#addBtn, input#finBtn, input#limBtn {
     padding: 0.1rem 0.4rem;
 }
 
-select#res {
+select#flista {
     width: 10rem;
-    display: block;
 }
 
 footer {
