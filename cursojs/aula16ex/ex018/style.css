@@ -30,6 +30,10 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
+div {
+    margin: 0.4rem;
+}
+
 div#sel {
     display: flex;
     flex-flow: column nowrap;
@@ -49,7 +53,11 @@ input#addBtn, input#finBtn, input#limBtn {
 }
 
 select#flista {
-    width: 10rem;
+    width: 9rem;
+}
+
+div#res p {
+    margin-bottom: 0.75rem;
 }
 
 footer {
