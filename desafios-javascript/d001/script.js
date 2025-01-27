@@ -7,7 +7,7 @@ botoes.forEach((botao) => {
     
     setTimeout(() =>{
         res.textContent = ''
-    },3000)
+    },5000)
     return
     })
 })
