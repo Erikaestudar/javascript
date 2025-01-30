@@ -36,6 +36,23 @@ div {
 
 div input#button {
     padding: 0.7rem;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    background-image: linear-gradient(to top, rgb(233, 236, 233), rgb(93, 99, 95));
+    color: hsl(0, 0%, 100%);
+}
+
+div#res p {
+    text-align: center;
+    margin-bottom: 0.9rem;
+}
+
+div#res img {
+    width: 2.3rem;
+    height: 2.3rem;
 }
 
 footer {
