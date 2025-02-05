@@ -25,8 +25,8 @@ function clicar() {
         <img src="images/flag-united-states.png">
         </p>`
         
-        res.innerHTML += `<p>Valor R$ ${(real).toFixed(2)} / cotação ${dolar}</p>`
-        res.innerHTML += `<p> Deu US$ ${(real / dolar).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}</p>`
+        res.innerHTML += `<p>Valor ${(real).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} / cotação ${(dolar).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}</p>`
+        res.innerHTML += `<p> Deu ${(real / dolar).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}</p>`
 
         // Remove o erro caso o valor seja válido
         limparErro()
