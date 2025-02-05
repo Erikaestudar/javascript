@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(70, 142, 236);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+section {
+    background-color: white;
+    border-radius: 0.625rem;
+    margin: auto;
+    padding: 0.93rem;
+    margin-top: 0.93rem;
+    margin-bottom: 0.93rem;
+    width: 31.25rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.9rem;
+    text-align: center;
+}
+
+div input#button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    background-image: linear-gradient(to top, rgb(233, 236, 233), rgb(93, 99, 95));
+    color: hsl(0, 0%, 100%);
+}
+
+div input#button:hover {
+    background-image: linear-gradient(to top, rgb(144, 172, 214), rgb(37, 132, 241));
+    color: hsl(0, 0%, 100%);
+}
+
+img#triS {
+    width: 1.1rem;
+    margin-top: 0.9rem;
+}
+
+div#form label {
+    display: none;
+}
+
+div#form input {
+    text-align: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    margin: 0.2rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.300);
+}
+
+div#form input:hover {
+    background-color:  rgba(222, 230, 222, 0.829);
+    box-shadow: none;
+}
+
+footer {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin: 0.93rem;
+}
