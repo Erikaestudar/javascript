@@ -37,9 +37,9 @@ if (!pro || pro.trim() === "") {
 
                 res.innerHTML = `
                     <h1>Calculando desconto de ${des}% para ${pro}.</h1>
-                    <p>O preço original era <strong> R$ ${price.toFixed(2)}</strong>.</p>
-                    <p>Você acaba de ganhar <strong>R$ ${valorDes.toFixed(2)}</strong> de desconto (-${des}%).</p>
-                    <p>Você vai pagar <strong>R$ ${finPrice.toFixed(2)}</strong> no produto ${pro}.</p>`
+                    <p>O preço original era <strong> R$ ${price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong>.</p>
+                    <p>Você acaba de ganhar <strong>R$ ${valorDes.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong> de desconto (-${des}%).</p>
+                    <p>Você vai pagar <strong>R$ ${finPrice.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong> no produto ${pro}.</p>`
 
                     disBlockInput() // Libera o input se o cálculo for bem-sucedido
 
@@ -55,7 +55,7 @@ if (!pro || pro.trim() === "") {
                 } else if (des === 0) {
                     res.innerHTML = `
                     <p>Sinto Muito. Esse produto não está na promoção!</p>
-                    <p>Você vai pagar o preço integral de <strong>R$ ${price.toFixed(2)}</strong> pelo ${pro}.</p>
+                    <p>Você vai pagar o preço integral de <strong>R$ ${price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</strong> pelo ${pro}.</p>
                     `
                     por.value = ""
                     por.focus()
