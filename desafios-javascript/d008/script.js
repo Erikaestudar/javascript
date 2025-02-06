@@ -29,7 +29,7 @@ if (!pro || pro.trim() === "") {
 
             if (por.value.length === 0 || isNaN(des)) {
                 alert('[ERRO] Digite um valor válido para o desconto!')
-                blockInput() // Bloqueia o input se der erro
+                por.focus()
             } else {
                 if (des >= 1 && des <= 100) {
                     let valorDes = (price * des) / 100
@@ -79,6 +79,8 @@ if (!pro || pro.trim() === "") {
 }
 
 function limpar() {
+    res.innerHTML = ""
+    por.value = ""
     location.reload()
 }
 

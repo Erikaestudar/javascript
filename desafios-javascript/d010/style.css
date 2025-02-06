@@ -36,7 +36,7 @@ div {
     text-align: center;
 }
 
-div input#button {
+div input#buttonBlock {
     padding: 0.7rem;
     border: none;
     border-radius: 0.3rem;
@@ -45,14 +45,18 @@ div input#button {
     color: hsl(0, 0%, 100%);
 }
 
-div input#button:hover {
+div input#button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
     background-image: linear-gradient(to top, rgb(144, 172, 214), rgb(37, 132, 241));
     color: hsl(0, 0%, 100%);
 }
 
 img#triS {
     width: 1.1rem;
-    margin-top: 0.9rem;
+
 }
 
 div#form label {
@@ -71,6 +75,14 @@ div#form input {
 div#form input:hover {
     background-color:  rgba(222, 230, 222, 0.829);
     box-shadow: none;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
 }
 
 footer {
