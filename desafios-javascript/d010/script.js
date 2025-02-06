@@ -12,10 +12,12 @@ function validarInputs() {
             button.style.border = '3px solid red'
             button.disabled = true
             button.setAttribute('id', 'buttonBlock')
+            aS.focus()
         } else {
             button.style.border = ""
             button.disabled = false
             button.setAttribute('id', 'button')
+            button.focus()
         }
 }
 
