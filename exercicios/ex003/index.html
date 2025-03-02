@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgb(186, 228, 248);
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados v1.0</h1>
+    <input id="button" type="button" value="Clica para começar">
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+</body>
+
+<script>
+    let btn = document.querySelector('#button')
+    btn.addEventListener('click', interagir)
+
+    function interagir() {
+        let name = prompt('Qual é o seu nome?')
+ 
+        if (name.trim() == "") {
+            alert('Por favor, digite um nome!')
+        } else {
+            name = capitalize(name) // Agora passa o name como parâmetro
+            alert(`Olá, ${name} ! É um prazer te conhecer!`)
+        }
+    }
+
+    function capitalize(name) {
+        return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
+
+        /*
+        charAt(0) -> Pega a primeira letra da palavra.
+
+        toUpperCase() -> Transforma essa primeira letra em maiúscula.
+
+        slice(1) -> Pega o restante do texto, começando da segunda letra.
+
+        toLowerCase() -> Transforma o restante da palavra em minúscula (caso tenha letras maiúsculas no meio).
+        */
+    }
+</script>
+</html>
