@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgb(186, 228, 248);
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Interagindo com um botão</h1>
+    <input id="button" type="button" value="Clica em mim!">
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+</body>
+
+<script>
+    let btn = document.querySelector('input#button')
+    btn.addEventListener('click', interagir)
+
+    function interagir() {
+        alert('Você clicou no batão!')
+    }
+</script>
+</html>
