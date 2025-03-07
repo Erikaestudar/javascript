@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgb(144, 177, 228);
+            color: white;
+            height: 100vh;
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+            border-radius: 0.7rem;
+        }
+
+        input#button:hover {
+            background-color: rgb(168, 166, 166);
+            color: white;
+        }
+
+        section {
+            margin: 2rem auto 10rem;
+            font-size: 1.3rem;
+        }
+
+        #res p#after::after {
+            font-weight: 700;
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+
+        @keyframes cursor {
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <input id="button" type="button" value="Clique para começar">
+    <section id="res">
+        <p id="after">Aqui vai aparecer o resultado</p>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+        let button = document.querySelector('#button')
+        let res = document.querySelector('#res')
+
+        button.addEventListener('click', clicar)
+
+        const capitalize = (word) => (word).charAt(0).toUpperCase() + (word).substring(1).toLowerCase()
+
+        function clicar() {
+
+            res.innerHTML = ""
+            let name = prompt('Qual seu nome?')
+
+            if (name.trim() === "" || !isNaN(Number(name))) {
+                alert('[ERRO] Digite o nome corretamente!')
+            } else {
+                name = capitalize(name)
+
+                let age = prompt(`Olá ${name}. Quantos anos você tem?`)
+
+                if (age.trim() === "" || isNaN(Number(age)) || Number(age) <= 0) {
+                    alert('[ERRO] Digite a idade corretamente!')
+                } else {
+                    let city = prompt(`Em qual cidade você mora, ${name}?`)
+
+                    if (city.trim() === "") {
+                    alert('[ERRO] Digite a cidade corretamente!')
+                    } else {
+                        city = capitalize(city)
+
+                        let dev = prompt(`Você sabe programar? responda SIM ou NÃO`).toLowerCase()
+
+                        dev = dev.normalize('NFD').replace(/[\u0300-\u036f]/g, "") // Esse comando remove os acentos!
+                       
+                        if (dev !== 'sim' && dev !== 'não' && dev !== 'nao') {
+                            alert('[ERRO] Responda apenas com SIM ou NÃO!')
+                        } else {
+                            let message = devMessage(dev)
+
+                            let loading = ["." , ".." , "..."]
+                            let contador = 0
+
+                            // Exibir "Carregando..." com barra piscando
+                            let loop = setInterval(() => {
+                                res.innerHTML = `Processando${loading[contador]}`
+                                contador++
+                                if (contador === loading.length) {
+                                    contador = 0
+                                }
+                            }, 500)
+
+                            // Depois de 3 segundos, revela os dados
+                            setTimeout(() => {
+                                clearInterval(loop) // Para a barra piscando
+                                res.innerHTML = `<p>Olá, <strong>${name}</strong>!&#x1F596;</p> <p>Você tem ${age} anos e mora em <strong>${city}</strong>.</p>${message}`
+                            }, 4000)
+                        }
+                    }
+                }
+            }
+            button.focus()
+        }
+
+        function devMessage(dev) {
+            if (dev === "sim") {
+                return `
+                <p>É ótimo saber que você sabe programar!</p>
+                <p> Seja bem-vindo(a) à Aliança Rebelde!</p>
+                `
+            } else {
+                return `
+                <p>É ótimo te-lo(a) conosco!</p>
+                <p> Não se preocupe, na Aliança Rebelde a gente ensina programação!</p>
+                `
+            }
+        }
+    </script>
+</body>
+</html>
