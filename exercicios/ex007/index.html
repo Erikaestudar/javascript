@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgb(155, 208, 221);
+            color: white;
+            height: 100vh;
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+            border-radius: 0.7rem;
+        }
+
+        input#button:hover {
+            background-color: rgb(168, 166, 166);
+            color: white;
+        }
+
+        section {
+            margin: 2rem auto 10rem;
+            font-size: 1.3rem;
+        }
+
+        #res p::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+
+        @keyframes cursor {
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v1.0</h1>
+    <input id="button" type="button" value="Calcular média">
+    <section id="res">
+        <p>O resultado vai aparecer aqui</p>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+        let btn = document.querySelector('#button')
+        let res = document.querySelector('#res')
+
+        btn.addEventListener('click', somar)
+
+        const capitalize = (name) => name.charAt(0).toUpperCase() + name.substring(1).toLowerCase()
+
+        function somar() {
+            res.innerHTML = ""
+
+            let name = prompt(`Qual é o nome do aluno?`).trim()
+            name = capitalize(name)
+
+            if (name === "" || !isNaN(Number(name))) {
+                alert('[ERRO] Digite o nome do aluno corretamente!')
+            } else {
+                let nota1 = prompt(`Qual foi a primeira nota de ${name}?`).trim()
+
+                if (nota1 === "" || isNaN(Number(nota1)) || Number(nota1) < 0) {
+                    alert('[ERRO] Valor inválido. Digite o primeiro!')
+                } else {
+                    let nota2 = prompt(`Além de ${nota1}, qual foi a outra nota de ${name}?`).trim()
+
+                    if (nota2 === "" || isNaN(Number(nota2)) || Number(nota2) < 0) {
+                    alert('[ERRO] Valor inválido. Digite o segundo!')
+                    } else {
+                        let n1 = Number(nota1)
+                        let n2 = Number(nota2)
+
+                        res.innerHTML = `
+                        <p>Calculando a média final de <mark>${name}</mark>.</p>
+                        <p>As notas obtidas foram <mark>${n1}</mark> e <mark>${n2}</mark>.</p>
+                        <p>A média final será <mark>${(n1 + n2) / 2}</mark>.</p>
+                        `
+                    }
+                }
+            } 
+        }
+    </script>
+</body>
+</html>
