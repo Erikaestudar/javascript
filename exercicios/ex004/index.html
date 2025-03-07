@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgb(18, 77, 165);
+            color: white;
+            height: 100vh;
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+            border-radius: 0.7rem;
+        }
+
+        input#button:hover {
+            background-color: rgb(168, 166, 166);
+            color: white;
+        }
+
+        section {
+            margin: 2rem auto 10rem;
+        }
+
+        #res p::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+        
+        #res strong::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+
+        @keyframes cursor {
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados v2.0</h1>
+    <input id="button" type="button" value="Clique para começar">
+    <section id="res">
+        <p>Aqui vai aparecer o resultado</p>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+        let button = document.querySelector('#button')
+        let res = document.querySelector('#res')
+        button.focus()
+
+        button.addEventListener('click', clicar)
+
+        /*
+        const capitalize = () =>	Arrow Function (mais moderna)
+        charAt() + substring()	Código mais rápido
+        */
+        const capitalize = (name) => name.charAt(0).toUpperCase() + name.substring(1).toLowerCase()
+
+        function clicar() {
+            let name = prompt('Qual é o seu nome?')
+
+            if (name.trim() === "" || !isNaN(Number(name))) {
+                alert('[ERRO] Digite um nome!')
+            } else {
+                name = capitalize(name)
+                res.innerHTML = `Olá, <strong>${name}</strong> ! É um grande prazer te conhecer! &#x1F596;`
+            }
+            button.focus()
+        }
+    </script>
+</body>
+</html>
