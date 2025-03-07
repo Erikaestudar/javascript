@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgb(155, 217, 221);
+            color: white;
+            height: 100vh;
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+            border-radius: 0.7rem;
+        }
+
+        input#button:hover {
+            background-color: rgb(168, 166, 166);
+            color: white;
+        }
+
+        section {
+            margin: 2rem auto 10rem;
+            font-size: 1.3rem;
+        }
+
+        #res p::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+
+        @keyframes cursor {
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <input id="button" type="button" value="Iniciar a soma">
+    <section id="res">
+        <p>O resultado vem aqui</p>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+        let btn = document.querySelector('#button')
+        let res = document.querySelector('#res')
+
+        btn.addEventListener('click', somar)
+
+        function somar() {
+            res.innerHTML = ""
+            let num1 = prompt(`Digite o primeiro número:`).trim()
+
+            if (num1 === "" || isNaN(Number(num1))) {
+                alert('[ERRO] Valor inválido. Digite o primeiro!')
+            } else {
+                let num2 = prompt(`Digite o segundo número:`).trim()
+
+                if (num2 === "" || isNaN(Number(num2))) {
+                alert('[ERRO] Valor inválido. Digite o segundo!')
+                } else {
+                    let n1 = Number(num1)
+                    let n2 = Number(num2)
+
+                    res.innerHTML = `
+                    <p>A soma entre ${n1} e ${n2} é igual a <strong>${n1 + n2}</strong>!</p>
+                    `
+                }
+            } 
+        }
+    </script>
+</body>
+</html>
