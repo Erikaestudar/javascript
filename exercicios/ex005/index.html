@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgb(139, 197, 175);
+            color: white;
+            height: 100vh;
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+            border-radius: 0.7rem;
+        }
+
+        input#button:hover {
+            background-color: rgb(168, 166, 166);
+            color: white;
+        }
+
+        section {
+            margin: 2rem auto 10rem;
+            font-size: 1.3rem;
+        }
+
+        #res p#after::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+        
+        #res strong::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+
+        @keyframes cursor {
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <input id="button" type="button" value="Clique para calcular">
+    <section id="res">
+        <p id="after">O resultado vem aqui</p>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+        let button = document.querySelector('#button')
+        let res = document.querySelector('#res')
+
+        button.addEventListener('click', calcular)
+
+        alert('Seja bem-vindo(a) ao meu site!')
+
+        function calcular() {
+            let num = prompt('Digite um número:').trim()
+
+            if (num === "" || isNaN(Number(num)) || Number(num) === 0) {
+                alert('[ERRO] Valor inválido. Digite um número válido!')
+            } else {
+                let n = Number(num)
+                res.innerHTML = `
+                <p>O dobro de ${n} é ${n * 2}.</p>
+                <p>E a metade é ${n / 2}</p>`
+            }
+        }
+    </script>
+</body>
+</html>
