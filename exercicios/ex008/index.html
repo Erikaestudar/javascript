@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: rgba(113, 175, 190, 0.692);
+            color: white;
+            height: 100vh;
+        }
+
+        input#button {
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+            border-radius: 0.7rem;
+        }
+
+        input#button:hover {
+            background-color: rgb(214, 211, 211);
+            color: white;
+        }
+
+        section {
+            margin: 2rem auto 10rem;
+            font-size: 1.3rem;
+        }
+
+        #res p#destaque::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+
+        @keyframes cursor {
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <input id="button" type="button" value="Clique para calcular">
+    <section id="res">
+        <p id="destaque">O resultado vai aparecer aqui</p>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+        let button = document.querySelector('#button')
+        let res = document.querySelector('#res')
+
+        button.addEventListener('click', calcular)
+
+        function calcular() {
+            let number = prompt("Digite um número: ").trim()
+
+            if (number === "" || isNaN(Number(number))) {
+                alert('[ERRO] Digite um número.')
+            } else {
+                let num = Number(number)
+
+                res.innerHTML = `<p>O número a ser analisado aqui será o <strong>${num}</strong></p><hr>`
+                res.innerHTML += `<p>O seu valor absoluto é ${Math.abs(num)}</p>`
+                res.innerHTML += `<p>A sua parte inteira é ${Math.trunc(num)}</p>`
+                res.innerHTML += `<p>O valor inteiro mais próximo é ${Math.round(num)}</p>`
+                res.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(num)}</p>` 
+                res.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(num)}</p>`        
+                res.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(num, 2)}</p>`
+                res.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(num, 3)}</p>`
+            }
+        }
+    </script>
+</body>
+</html>
