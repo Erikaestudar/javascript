@@ -32,10 +32,15 @@
             font-size: 1.3rem;
         }
 
-        #res p::after {
+        #res p#destaque::after {
             content: "_";
             display: inline-block;
             animation: cursor 0.7s steps(2) infinite;
+        }
+
+        mark {
+            background-color: rgba(231, 231, 120, 0.849);
+            padding: 2rem;
         }
 
         @keyframes cursor {
@@ -58,7 +63,7 @@
     <h1>Média do aluno v1.0</h1>
     <input id="button" type="button" value="Calcular média">
     <section id="res">
-        <p>O resultado vai aparecer aqui</p>
+        <p id="destaque">O resultado vai aparecer aqui</p>
     </section>
 
     <footer>
