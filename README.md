@@ -1,7 +1,7 @@
-<img src="index/assets/images/octocat.png" align="right" width="80">
+<img src="index/assets/images/octocat.png" align="right" width="200">
 
 # javascript
-## Curso de JavaScript do CursoemVideo
+### Curso de JavaScript do CursoemVideo
 
  * <p><a href="https://erikaestudar.github.io/javascript/index/index.html">Execute os exercícios aqui</a></p>
 
