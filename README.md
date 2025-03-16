@@ -1,4 +1,4 @@
-<img src="index/assets/images/logo-javascript.png" align="right" width="300">
+<img src="index/assets/images/index/assets/images/octocat-829c0067cec9.png" align="right" width="200">
 
 # javascript
 
