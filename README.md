@@ -1,4 +1,4 @@
-<img src="index/assets/images/index/assets/images/octocat-829c0067cec9.png" align="right" width="200">
+<img src="index/assets/images/100-file-icon.png" align="right" width="200">
 
 # javascript
 
