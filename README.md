@@ -1,4 +1,4 @@
 # javascript
- Curso de JavaScript do CursoemVideo
+ Curso de JavaScript do CursoemVideo ![](https://erikaestudar.github.io/javascript/index/assets/images/logo-javascript.png)
 
- * <p><a href="https://erikaestudar.github.io/javascript/desafios-javascript/d001/index.html">Executar o desafio 001</a></p>
+ * <p><a href="https://erikaestudar.github.io/javascript/index/index.html">Execute os exercícios aqui</a></p>
