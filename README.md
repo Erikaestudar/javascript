@@ -1,4 +1,4 @@
-<img src="index/assets/images/100-file-icon.png" align="right" width="200">
+<img src="index/assets/images/100-file-icon.png" align="right" width="60">
 
 # javascript
 
