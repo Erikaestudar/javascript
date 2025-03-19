@@ -53,6 +53,21 @@ div input#button:hover {
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.363);
 }
 
+#res p::after {
+    content: "_";
+    display: inline-block;
+    animation: cursor 0.7s steps(2) infinite;
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 footer {
     color: white;
     font-style: italic;
