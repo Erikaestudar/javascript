@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(189, 85, 202);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-top: 1.25rem;
+
+    h1 {
+        font-family: "Lobster", sans-serif;
+        font-size: 2.6rem;
+    }
+}
+
+section {
+    background-color: white;
+    color: #49414A;
+    border-radius: 0.625rem;
+    border-radius: 0.625rem;
+    margin: 1.2rem auto;
+    padding-block: 1.3rem;
+    width: 31.25rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+div {
+    margin-bottom: 0.9rem;
+    text-align: center;
+}
+
+div input#button {
+    padding: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.6rem;
+    background-image: linear-gradient(to right, hsl(292, 20%, 45%), hsl(293, 6%, 27%));
+    color: white;
+}
+
+div input#button:hover {
+    background-image: linear-gradient(to top, hsl(90, 14%, 40%), hsl(90, 52%, 56%));
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.363);
+}
+
+#res p#style::after {
+    content: "_";
+    display: inline-block;
+    animation: cursor 0.7s steps(2) infinite;
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+p#left-style {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+    line-height: 2.2rem;
+}
+
+mark {
+    background-color: #8fc955a4;
+}
+
+footer {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin: 0.93rem;
+}
