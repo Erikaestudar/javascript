@@ -25,8 +25,12 @@ function info() {
     let gmt = `GMT${gmtOffset >= 0 ? '+' : ''}${gmtOffset}`
 
     // Exibindo o resultado
-    res.innerHTML = `
-        <p>O que eu recebi do sistema foi:</p>
+    res.innerHTML = `<p>O que eu recebi do sistema foi:</p>`
+    res.innerHTML += `
+    <p><strong>Modo Simples:</strong></p>
+    <p>${now}</p>
+    `
+    res.innerHTML += `
         <p id="style">
         ${dayName}, ${day} de ${monthName} de ${year} <br>
         São ${hour}:${minute}:${seconds} ${gmt} (Horário Padrão de Brasília)</p>
