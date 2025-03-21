@@ -54,7 +54,7 @@ div input#button:hover {
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.363);
 }
 
-#res p::after {
+#res p#style::after {
     content: "_";
     display: inline-block;
     animation: cursor 0.7s steps(2) infinite;
@@ -67,6 +67,13 @@ div input#button:hover {
     100% {
         opacity: 1;
     }
+}
+
+p#style {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.675rem;
+    line-height: 2.2rem;
 }
 
 footer {
