@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+body.easy {
+    background-image: linear-gradient(to bottom,  #91C4D9, #164F73);
+}
+
+body.hard {
+    background-image: linear-gradient(to bottom, #051726, #033159);
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+section {
+    background-color: white;
+    border-radius: 0.625rem;
+    margin: auto;
+    padding: 0.93rem;
+    margin-top: 0.93rem;
+    width: 26rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 1rem;
+}
+
+div .btn-style {
+    padding: 0.7rem;
+    width: 8.3rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.589);
+}
+
+div.easy .btn-style {
+        background-image: linear-gradient(to right, #F2A35E, transparent);
+}
+
+div.hard .btn-style {
+    background-image: linear-gradient(to right, #590F2A, transparent);
+}
+
+div.easy .btn-style:hover {
+    background-image: linear-gradient(to right, #6A605B,#BF8563);
+    color: white;
+}
+
+div.hard .btn-style:hover {
+    background-image: linear-gradient(to right, transparent, #D9296A);
+    color: white;
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 2.6rem;
+}
+
+p#style::after {
+    content: "_";
+    display: inline-block;
+    animation: cursor 0.7s steps(2) infinite;
+}
+
+#res p {
+    margin-top: 0.3rem;
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin: 0.93rem;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Jogo em JavaScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="easy">
+    <header>
+        <h1>Adivinhe o Número</h1>
+    </header>
+    <section>
+        <div class="easy">
+            <p>Já pensei em um número entre 1 e 100</p>
+            <p id="style">tente adivinhar qual foi..</p>
+            <button type="submit" id="play" class="btn-style">Iniciar Jogo</button>
+            <button type="reset" id="start" class="btn-style">Novo Jogo</button>
+            <button type="button" id="mode-level" class="btn-style">Modo Difícil</button>
+            <button type="button" id="hint" class="btn-style" disabled>Pedir Dica 🧠</button>
+
+
+            <h2 id="mostrador" hidden>Tentativas restantes: <output id="tentativasRestantes">5</output></h2>
+        </div>
+        <div id="res">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
