@@ -39,7 +39,7 @@ function start() {
     hintBtn.disabled = !hardMode  // Só ativa dica no modo difícil
 }
 
-function player(){
+function player() {
 
     let playNumber = prompt(`Qual é seu palpite?`).trim()
 
