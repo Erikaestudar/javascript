@@ -36,7 +36,7 @@ function start() {
     tentativasRestantes.textContent = maxTentativas  // Reseta o contador
     alert('Jogo iniciado! Tente adivinhar o número entre 1 e 100.')
     playBtn.disabled = false 
-    hintBtn.disabled = false  // Só ativa dica no modo difícil
+    hintBtn.disabled = !hardMode  // Só ativa dica no modo difícil
 }
 
 function player(){
@@ -65,7 +65,7 @@ function player(){
         } else {
             res.innerHTML += `<p><strong>PARABÉNS!</strong> Você acertou! Eu tinha sorteado o número ${numberSecret}!</p>`
             playBtn.disabled = true
-            hintBtn.disabled = true
+            hintBtn.disabled = !hardMode
             return
         }
 
@@ -84,6 +84,7 @@ function mode() {
     let container = document.querySelector('div.easy')
     container.classList.add('hard')
 
+    hintBtn.disabled = false  // Ativa a dica quando entra no modo hard
     hardMode = true
     mostrador.hidden = false  // Mostra o contador
     alert('Modo Difícil ativado! Você tem apenas 5 tentativas. 💀')
