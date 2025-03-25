@@ -67,7 +67,7 @@ main {
     box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.400);
     margin: 2rem auto;
     border-radius: 0.8rem;
-
+    overflow-x: auto;
 }
 
 .title {
