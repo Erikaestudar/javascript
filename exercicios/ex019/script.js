@@ -42,15 +42,15 @@ function calcular() {
 
     switch (op) {
         case 1:
-            res.innerHTML += `<p>${n1} + ${n2} = <strong>${n1 + n2}</strong></p>`
+            res.innerHTML += `<p>${n1} + ${n2} = <strong>${(n1 + n2).toLocaleString('pt-BR')}</strong></p>`
             break
 
         case 2:
-            res.innerHTML += `<p>${n1} - ${n2} = <strong>${n1 - n2}</strong></p>`
+            res.innerHTML += `<p>${n1} - ${n2} = <strong>${(n1 - n2).toLocaleString('pt-BR')}</strong></p>`
             break
 
         case 3:
-            res.innerHTML += `<p>${n1} * ${n2} = <strong>${n1 * n2}</strong></p>`
+            res.innerHTML += `<p>${n1} * ${n2} = <strong>${(n1 * n2).toLocaleString('pt-BR')}</strong></p>`
             break
 
         case 4:
@@ -59,7 +59,7 @@ function calcular() {
 
             } else {
 
-                res.innerHTML += `<p>${n1} / ${n2} = <strong>${n1 / n2}</strong></p>`
+                res.innerHTML += `<p>${n1} / ${n2} = <strong>${(n1 / n2).toLocaleString('pt-BR')}</strong></p>`
             }
             break
 
