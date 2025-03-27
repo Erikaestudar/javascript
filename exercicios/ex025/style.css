@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(34, 175, 194);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+section {
+    background-color: white;
+    border-radius: 0.625rem;
+    margin: auto;
+    padding: 0.93rem;
+    margin-top: 0.93rem;
+    margin-bottom: 0.93rem;
+    width: 30rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+}
+
+h2 {
+    font-family: "Lobster", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+div {
+    margin-bottom: 0.9rem;
+    text-align: center;
+}
+
+input#num {
+    width: 5rem;
+    border: none;
+    margin-inline: .7rem;
+    padding: 0.3rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.37);
+    border-radius: 30px;
+    text-indent: 0.5rem;
+}
+
+input#button {
+    padding: 0.3rem .5rem;
+    border: none;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+    border-radius: 0.7rem;
+}
+
+input#button:hover {
+    background-color: rgb(168, 166, 166);
+    color: white;
+}
+
+#res p#style::after {
+    content: "_";
+    display: inline-block;
+    animation: cursor 0.7s steps(2) infinite;
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin: 0.93rem;
+}
