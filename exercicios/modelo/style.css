@@ -26,8 +26,19 @@ section {
     padding: 0.93rem;
     margin-top: 0.93rem;
     margin-bottom: 0.93rem;
-    width: 31.25rem;
+    width: 25rem;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: "Lobster", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 div {
@@ -35,9 +46,32 @@ div {
     text-align: center;
 }
 
-div input#button {
-    padding: 0.7rem;
+input#button {
+    padding: 1rem;
+    border: none;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+    border-radius: 0.7rem;
 }
+
+input#button:hover {
+    background-color: rgb(168, 166, 166);
+    color: white;
+}
+
+        #res p::after {
+            content: "_";
+            display: inline-block;
+            animation: cursor 0.7s steps(2) infinite;
+        }
+
+        @keyframes cursor {
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
 footer {
     color: white;
