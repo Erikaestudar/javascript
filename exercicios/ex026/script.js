@@ -32,8 +32,30 @@ function contar() {
         return
     }
 
+    if (n2 < 0) {
+        res.innerHTML += `<p>Contando de ${n2} até ${n1}</p>`
+
+        for (let c = n2; c <= n1; c++) {
+            res.innerHTML += `${c} &#x1F449`
+        }
+        res.innerHTML += `&#x1F3C1;`
+        num1.value = ""
+        num2.value = ""
+        num1.focus()
+
+    } else {
+    
+        for (let c = n1; c >= n2; c--) {
+            res.innerHTML += `${c} &#x1F449`
+        }
+        res.innerHTML += `&#x1F3C1;`
+        num1.value = ""
+        num2.value = ""
+        num1.focus()  
+    }
+
     if (n1 < n2) {
-        
+            
         res.innerHTML += `<p>Contando de ${n1} até ${n2}</p>`
 
         for (let c = n1; c <= n2; c++) {
