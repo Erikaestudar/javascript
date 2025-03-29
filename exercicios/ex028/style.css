@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(23, 171, 182, 0.829);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+section {
+    background-color: white;
+    border-radius: 0.625rem;
+    margin: auto;
+    padding: 0.93rem;
+    margin-top: 0.93rem;
+    margin-bottom: 0.93rem;
+    width: 25rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+h1 {
+    font-family: "Lobster", sans-serif;
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-family: "Lobster", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+    margin-block: 1.6rem 1.3rem;
+}
+
+div {
+    margin-bottom: 0.9rem;
+    text-align: center;
+}
+
+div#res {
+    margin-bottom: 2rem;
+}
+
+input#num {
+    border: none;
+    width: 5rem;
+    padding: 0.5rem;
+    margin: 0em 1.2rem 0rem 0.6rem;
+    border-radius: 0.8rem;
+    text-indent: 0.6rem;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.438);
+}
+
+input#button {
+    padding: 0.5rem;
+    border: none;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.637);
+    border-radius: 0.7rem;
+}
+
+input#button:hover {
+    background-color: rgb(168, 166, 166);
+    color: white;
+}
+
+p#style::after {
+    content: "_";
+    display: inline-block;
+    animation: cursor 0.7s steps(2) infinite;
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin: 0.93rem;
+}
