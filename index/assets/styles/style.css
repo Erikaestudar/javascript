@@ -58,6 +58,10 @@ nav {
     a:hover {
         text-decoration: underline;
     }
+
+    & :nth-child(1) {
+        margin-left: 2rem;
+    }
 }
 
 main {
@@ -119,19 +123,5 @@ footer {
     p {
         text-align: center;
         font: var(--text-lg);
-    }
-}
-
-@media (width <= 37.5em) {
-    nav {
-        justify-content: center;
-    }
-}
-
-@media (width >= 37.5em) {
-    nav {
-        & :nth-child(1) {
-            margin-left: 2rem;
-        }
     }
 }
