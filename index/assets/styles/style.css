@@ -61,8 +61,8 @@ nav {
 }
 
 main {
-    width: 40rem;
-    height: 80vh;
+    max-width: 40rem;
+    max-height: 80vh;
     background-color: rgba(255, 255, 255, 0.700);
     box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.400);
     margin: 2rem auto;
@@ -119,5 +119,19 @@ footer {
     p {
         text-align: center;
         font: var(--text-lg);
+    }
+}
+
+@media (width <= 37.5em) {
+    nav {
+        justify-content: center;
+    }
+}
+
+@media (width >= 37.5em) {
+    nav {
+        & :nth-child(1) {
+            margin-left: 2rem;
+        }
     }
 }
