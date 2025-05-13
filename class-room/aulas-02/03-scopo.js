@@ -13,7 +13,7 @@ var name = "Erika"
 console.log(age)
 
 
-// Com o let não é possível isso
+// Com o let não é possível içar
 let address = "Rua X"
 {
     address = "Rua Y"
