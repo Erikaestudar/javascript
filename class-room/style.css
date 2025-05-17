@@ -17,7 +17,8 @@ body {
 }
 
 #firstBtn,
-.generalBtn {
+.generalBtn,
+.geralBtn {
     width: 8rem;
     height: 2.5rem;
     border-radius: 30rem;
@@ -31,11 +32,13 @@ body {
 }
 
 /* DEFAULT BUTTON */
-.default {
+.default,
+.defaultBtn {
     background-color: white;
 }
 
-.default span::after {
+.default span::after,
+.defaultBtn span::after {
     content: "ADD";
 }
 
@@ -47,7 +50,9 @@ body {
 }
 
 .checked #img-01,
-.checked #img-02 {
+.checked #img-02,
+.checked .img-01,
+.checked .img-02 {
     width: 1.2rem;
     height: 1.2rem;
     padding: .2rem;
@@ -55,11 +60,13 @@ body {
     border: 1px solid white;
 }
 
-.checked #img-01 {
+.checked #img-01,
+.checked .img-01 {
     background: url(assets/minus.svg) no-repeat center/cover;
 }
 
-.checked #img-02 {
+.checked #img-02,
+.checked .img-02 {
     background: url(assets/add.svg) no-repeat center/cover;
 }
 
@@ -67,3 +74,7 @@ body {
     content: "";
 }
 
+#teste-02 {
+    display: flex;
+    gap: 0.5rem;
+}
