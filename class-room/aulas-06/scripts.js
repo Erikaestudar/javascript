@@ -17,9 +17,9 @@ console.log(guestsByClass)
 
 // Exibir o primeiro elemento da lista.
 console.log(guestsByClass.item(0))
-console.log(guestByClass[1])
+console.log(guestsByClass[1])
 
-// Selecionar lista elementos pela tag
+// Selecionar lista de elementos pela tag
 const guestsTag = document.getElementsByTagName("li")
 console.log(guestsTag)
 
