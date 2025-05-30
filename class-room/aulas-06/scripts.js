@@ -1,10 +1,10 @@
-// Visualizar o conteúdo do document.
+// Visualiza o conteúdo do document.
 // console.log(document)
 
-// Obter o title da página.
+// Obtém o title da página.
 // console.log(document.title)
 
-// Acessar o elemento pelo ID.
+// Acessa o elemento pelo ID.
 const guest = document.getElementById("guest-2")
 console.log(guest)
 
@@ -23,3 +23,13 @@ console.log(guestsByClass[1])
 const guestsTag = document.getElementsByTagName("li")
 console.log(guestsTag)
 
+
+// Utilizando o querySelector.
+
+// Acessa o elemento pelo seletor ID.
+const guest01 = document.querySelector("#guest-2")
+console.log(guest01)
+
+// Retorna todos os elementos encontrados pelo query
+const guest02 = document.querySelectorAll(".guest")
+console.log(guest02)
