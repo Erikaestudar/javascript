@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,42 +8,26 @@
 </head>
 <body>
     <main>
-        <div class="container">
-            <h1>Teste 01</h1>
-            <button type="button" id="firstBtn" class="generalBtn default" title="first">
-                <div id="img-01"></div>
-                <span class="counter"></span>
-                <div id="img-02"></div>
-            </button>
-            <div>
-                <h2>Total ( <span class="total">0</span> )</h2>
-            </div>
-        </div>
+        <h1>Convidados</h1>
 
-        <div class="container">
-            <h2>Teste 02</h2>
-            <div id="teste-02">
-                <button type="button" class="geralBtn defaultBtn" title="multi">
-                    <div class="img-01"></div>
-                    <span class="count"></span>
-                    <div class="img-02"></div>
-                </button>
-                <button type="button" class="geralBtn defaultBtn" title="multi">
-                    <div class="img-01"></div>
-                    <span class="count"></span>
-                    <div class="img-02"></div>
-                </button>
-                <button type="button" class="geralBtn defaultBtn" title="multi">
-                    <div class="img-01"></div>
-                    <span class="count"></span>
-                    <div class="img-02"></div>
-                </button>
-            </div>
-            <div>
-                <h2>Total ( <span class="all">0</span> )</h2>
-            </div>
-        </div>
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" placeholder="Digite o nome">
+            <button type="submit" id="btn" class="button">Adicionar</button>
+        </form>
+
+        <ul>
+            <li id="guest-1" class="guest">
+                <span>Rodrigo</span>
+                <span class="hide">0 novas mensagens</span>
+            </li>
+
+            <li id="guest-2" class="guest">
+                <span>Mayk</span>
+            </li>
+        </ul>
     </main>
-    <script src="aulas-01/test.js"></script>
+
+    <script src="aulas-07/debug.js"></script>
 </body>
 </html>
