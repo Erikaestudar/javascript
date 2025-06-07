@@ -40,6 +40,5 @@ button.addEventListener("click", (e) => {
 // TESTE 02
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.querySelectorAll(".geralBtn")
-    buttons.classList.add("checked")
-    buttons.classList.remove("default")
+    console.log(buttons[2])
 })
