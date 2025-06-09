@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form>
+                <label for="task"></label>
+                <input type="text" name="task" id="task" title="task" placeholder="Crie sua tarefa">
+                
+                <button type="submit" class="gerarBtn">Gerar Tarefas</button>
+            </form>
+        
+
+            <div class="list-wrapper">
+                <div class="title-wrapper">
+                    <h1 class="title-task">task</h1>
+                    <span class="plus-task"></span>
+                </div>
+                
+                <ul class="list">
+                    <li>
+                        <span class="checkbox"></span>
+                        <p class="task-name">name</p>
+                        <span class="edit-task"></span>
+                        <span class="delete"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
