@@ -136,6 +136,7 @@ ol.list {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
+    overflow: hidden;
 }
 
 .border-wrapper {
@@ -153,4 +154,18 @@ ol.list {
     height: 3rem;
     background-color: rgb(17, 136, 136);
     border-radius: 50%;
+}
+
+.list-02 {
+    list-style-position: inside;
+    list-style: none;
+}
+
+.list-02 li.items-02 {
+    background-color: rgb(106, 187, 187);
+    margin-block: .5rem;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
 }

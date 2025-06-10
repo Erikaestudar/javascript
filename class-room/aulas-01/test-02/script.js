@@ -66,7 +66,7 @@ form.addEventListener("submit", (event) => {
     for (let i = 1; i <= 2; i++) {
         let newItem = document.createElement("li")
         newItem.classList.add("show-result")
-        newItem.textContent = `${i}`
+        newItem.textContent = `${i}.`
 
         let del = document.createElement("span")
         del.classList.add("del")
@@ -88,27 +88,30 @@ form.addEventListener("submit", (event) => {
 
 let repetirBtn = document.querySelector("#repetir")
 let imagesWrapper = document.querySelector(".images-wrapper")
-
+let list02 = document.querySelector(".list-02")
 
 repetirBtn.addEventListener("click", (event) => {
     event.stopPropagation()
 
-    for ( let a = 1; a <= 3; a++) {
-        let boxWrapper = document.createElement("div")
-        boxWrapper.classList.add("show-result")
-
+    for ( let a = 1; a <= 2; a++) {
         let borderWrapper = document.createElement("div")
         borderWrapper.classList.add("border-wrapper")
 
         let colorWrapper = document.createElement("div")
         colorWrapper.classList.add("color-wrapper")
+        //colorWrapper.textContent = `${a}`
 
-        boxWrapper.appendChild(borderWrapper)
-        boxWrapper.appendChild(colorWrapper)
+        borderWrapper.appendChild(colorWrapper)
 
-        imagesWrapper.appendChild(boxWrapper)
-        imagesWrapper.classList.add("show-result")
+        imagesWrapper.appendChild(borderWrapper)
+       
+        // Criando item da lista
+        let liItem = document.createElement("li")
+        liItem.classList.add("items-02")
+        liItem.textContent = `${a}.`
 
-     
+        list02.appendChild(liItem)
+ 
+        console.log(list02)
     }
 })
