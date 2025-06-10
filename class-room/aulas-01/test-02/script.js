@@ -82,3 +82,33 @@ form.addEventListener("submit", (event) => {
         })
     }
 })
+
+
+// Input-wrapper - Repetições
+
+let repetirBtn = document.querySelector("#repetir")
+let imagesWrapper = document.querySelector(".images-wrapper")
+
+
+repetirBtn.addEventListener("click", (event) => {
+    event.stopPropagation()
+
+    for ( let a = 1; a <= 3; a++) {
+        let boxWrapper = document.createElement("div")
+        boxWrapper.classList.add("show-result")
+
+        let borderWrapper = document.createElement("div")
+        borderWrapper.classList.add("border-wrapper")
+
+        let colorWrapper = document.createElement("div")
+        colorWrapper.classList.add("color-wrapper")
+
+        boxWrapper.appendChild(borderWrapper)
+        boxWrapper.appendChild(colorWrapper)
+
+        imagesWrapper.appendChild(boxWrapper)
+        imagesWrapper.classList.add("show-result")
+
+     
+    }
+})
