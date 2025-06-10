@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
 
     let endWrapper = document.createElement("p")
     endWrapper.classList.add("end-wrapper")
-    endWrapper.textContent = `${address.value}, Nº ${number.value}`
+    endWrapper.textContent = `Rua: ${address.value}, Nº ${number.value}`
 
     let deleteBtn = document.createElement("span")
     deleteBtn.classList.add("delete")

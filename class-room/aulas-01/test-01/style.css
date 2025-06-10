@@ -100,11 +100,11 @@ ul {
 }
 
 .list li span.checkbox {
-    background: url(../../checkbox-default.svg) no-repeat center/cover;
+    background: url(../../icons/checkbox-default.svg) no-repeat center/cover;
 }
 
 .list li.checked span.checkbox {
-    background: url(../../checkbox-checked.svg) no-repeat center/cover; 
+    background: url(../../icons/checkbox-checked.svg) no-repeat center/cover; 
 }
 
 .list li.checked p.end-wrapper {
@@ -113,12 +113,12 @@ ul {
 }
 
 .list li span.delete {
-    background: url(../../delete.svg) no-repeat center/cover;
+    background: url(../../icons/delete.svg) no-repeat center/cover;
     margin-left: auto;
 }
 
 .list li span.delete:hover {
-    background: url(../../delete-hover.svg) no-repeat center/cover;
+    background: url(../../icons/delete-hover.svg) no-repeat center/cover;
 }
 
 .show-result {
