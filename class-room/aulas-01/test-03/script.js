@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
 
         let taskName = document.createElement("p")
         taskName.classList.add("task-name")
-        taskName.textContent = capitalize(newTask.value)
+        taskName.textContent = `${capitalize(newTask.value)} ${newTask.value.length}`
 
         let editTask = document.createElement("span")
         editTask.classList.add("edit-task")
