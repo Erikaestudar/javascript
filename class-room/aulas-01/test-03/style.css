@@ -58,6 +58,8 @@ button:hover {
     background-color: rgb(50, 97, 158);
 }
 
+
+/* LIST-WRAPPER */
 div.list-wrapper {
     margin-block: 2rem;
 }
@@ -65,18 +67,6 @@ div.list-wrapper {
 span {
     width: 1.5rem;
     height: 1.5rem;
-}
-
-.title-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title-wrapper .plus-task {
-    width: 1.5rem;
-    height: 1.5rem;
-    background: #a19c9c url(add.svg) no-repeat center/cover;
 }
 
 ul.list {
