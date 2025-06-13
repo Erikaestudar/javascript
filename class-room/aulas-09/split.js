@@ -1,3 +1,4 @@
+// Separando e unindo strings
 let text = "Estudar, Aprender, Praticar"
 
 // Separar a String.

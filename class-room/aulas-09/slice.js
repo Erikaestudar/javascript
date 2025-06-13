@@ -1,3 +1,4 @@
+// Substituindo e fatiando um texto.
 let message = "Estou estudando os fundamentos do Javascript."
 
 // Substituindo parte de um texto.
