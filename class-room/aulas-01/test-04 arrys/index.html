@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form>
+                <label for="task"></label>
+                <input type="text" name="task" id="task" title="Use pontos ou vírgulas para separar as tarefas." placeholder="Crie sua tarefa">
+                
+                <button type="submit" class="gerarBtn">Separar Tarefas</button>
+                <button type="button" class="gerarBtn">Juntar Tarefas</button>
+            </form>
+        
+
+            <div class="list-wrapper">
+                <ul class="list">
+                    <li class="checked">
+                        <p>po</p>
+                        <span class="delete"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
