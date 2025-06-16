@@ -50,6 +50,7 @@ form.addEventListener("submit", (event) => {
             del.addEventListener("click", (event) => {
                 event.stopPropagation()
                 list.removeChild(newItem)
+                newTask.focus()
             })
 
             newItem.addEventListener("click", (event) => {
