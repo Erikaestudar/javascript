@@ -9,61 +9,56 @@ function capitalize(title) {
 }
 
 
-
 form.addEventListener("submit", (event) => {
     event.preventDefault()
    
     if (newTask.value.trim()) {
 
-        // Criando os elementos da lista <li>.
-        let newItem = document.createElement("li")
-        newItem.classList.add("show-tasks")
-
-        let checkbox = document.createElement("span")
-        checkbox.classList.add("checkbox")
-
-        let taskName = document.createElement("p")
-        taskName.classList.add("task-name")
-        
-        taskName.textContent = `${capitalize(newTask.value)}`
-        console.log(taskName)
-
-        /*
-
         let separate = (newTask.value).split(",")
-        taskName.textContent = separate
         console.log(separate)
-        */
+        
+        for (let ballPoint of separate) {
+            // Criando os elementos da lista <li>.
+            let newItem = document.createElement("li")
+            newItem.classList.add("show-tasks")
 
-        let editTask = document.createElement("span")
-        editTask.classList.add("edit-task")
+            let checkbox = document.createElement("span")
+            checkbox.classList.add("checkbox")
 
-        let del = document.createElement("span")
-        del.classList.add("delete")
+            let taskName = document.createElement("p")
+            taskName.classList.add("task-name")
+            
+            taskName.textContent = `${capitalize(ballPoint)}`
+            //console.log(taskName)
 
-        // Juntando tudo na <li>.
-        newItem.appendChild(checkbox)
-        newItem.appendChild(taskName)
-        newItem.appendChild(editTask)
-        newItem.appendChild(del)
+            
+            let editTask = document.createElement("span")
+            editTask.classList.add("edit-task")
+            
+            let del = document.createElement("span")
+            del.classList.add("delete")
 
-        list.appendChild(newItem)
-        list.classList.add("show-tasks")
+            // Juntando tudo na <li>.
+            newItem.appendChild(checkbox)
+            newItem.appendChild(taskName)
+            newItem.appendChild(editTask)
+            newItem.appendChild(del)
 
-        del.addEventListener("click", (event) => {
-            event.stopPropagation()
-            list.removeChild(newItem)
-        })
+            list.appendChild(newItem)
+            list.classList.add("show-tasks")
+  
+            del.addEventListener("click", (event) => {
+                event.stopPropagation()
+                list.removeChild(newItem)
+            })
 
-
-       newItem.addEventListener("click", (event) => {
-            event.stopPropagation()
-            newItem.classList.toggle("checked")
-        })
-        /*
-
-        */
+            newItem.addEventListener("click", (event) => {
+                event.stopPropagation()
+                newItem.classList.toggle("checked")
+            })
+        }
         newTask.value = ""
+
     } else {
         alert(`[ERRO] Por favor, escreva uma nova tarefa!`)
     }  
