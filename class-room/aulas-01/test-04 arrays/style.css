@@ -86,6 +86,7 @@ ul.list {
 
 .list li.checked p {
     text-decoration: line-through;
+    color: blanchedalmond;
 }
 
 .list li span.delete {
