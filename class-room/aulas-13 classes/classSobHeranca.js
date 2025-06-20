@@ -9,7 +9,7 @@ class Animal {
     }
 }
 
-// Subescrevendo a classe, você deve reescrever a função.
+// Sobrescrevendo a classe, você pode reescrever a função.
 class Dog extends Animal {
     makeNoise() {
         console.log("Woof! Woof!")
