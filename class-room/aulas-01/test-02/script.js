@@ -75,13 +75,23 @@ form.addEventListener("submit", (event) => {
 
         list.appendChild(newItem)
 
+        /*
         del.addEventListener("click", (event) => {
             event.stopPropagation()
 
             list.removeChild(newItem)
         })
+        */
     }
 })
+
+list.addEventListener("click", (del) => {
+    if (del.target.classList.contains("del")) {
+        let item = del.target.closest(".show-result")
+        item.remove()
+    }
+})
+
 
 
 // Input-wrapper - Repetições
