@@ -39,6 +39,7 @@ form.addEventListener("submit", (event) => {
     list.appendChild(newItem)
     list.classList.add("show-result")
 
+    /*
     newItem.addEventListener("click", () => {
         newItem.classList.toggle("checked")
     })
@@ -47,7 +48,7 @@ form.addEventListener("submit", (event) => {
         event.stopPropagation()
         list.removeChild(newItem)
     })
-
+    */
     cleanInputs()
 })
 
@@ -56,3 +57,16 @@ function cleanInputs() {
     number.value = ""
     address.focus()
 }
+
+list.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete")) {
+        let item = event.target.closest(".show-result")
+        item.remove()
+    }
+
+
+    if (event.target.classList.contains("checkbox") || event.target.classList.contains("checked") || event.target.classList.contains("show-result")) {
+        let check = event.target.closest(".show-result")
+        check.classList.toggle("checked")
+    }
+})
