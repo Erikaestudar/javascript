@@ -46,7 +46,8 @@ form.addEventListener("submit", (event) => {
 
             list.appendChild(newItem)
             list.classList.add("show-tasks")
-  
+            
+            /*
             del.addEventListener("click", (event) => {
                 event.stopPropagation()
                 list.removeChild(newItem)
@@ -57,6 +58,7 @@ form.addEventListener("submit", (event) => {
                 event.stopPropagation()
                 newItem.classList.toggle("checked")
             })
+            */
         }
         newTask.value = ""
 
@@ -64,4 +66,17 @@ form.addEventListener("submit", (event) => {
         alert(`[ERRO] Por favor, escreva uma nova tarefa!`)
     }  
     
+})
+
+// Pega o evento dentro da lista (ul).
+list.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete")) {
+        let item = event.target.closest(".show-tasks")
+        item.remove()
+    }
+
+    if (event.target.classList.contains("checkbox") || event.target.classList.contains("task-name") || event.target.classList.contains("show-tasks")) {
+        let task = event.target.closest(".show-tasks")
+        task.classList.toggle("checked")
+    }
 })
