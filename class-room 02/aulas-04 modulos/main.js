@@ -18,3 +18,16 @@ console.log("24 / 6 =", math.division(24, 6))
 
 // Importando pela renomeação.
 console.log("24 - 6 =", math.subtractionTwoNumbers(24, 6))
+
+
+
+// Importando classe.
+import {Calc} from "./class.js"
+
+// Instanciar.
+const calc = new Calc()
+
+console.log(calc.name)
+console.log("10 + 20 =", calc.sum(10, 20))
+console.log("10 * 20 =", calc.multiply(10, 20))
+console.log("10 / 10 =", calc.division(10, 10))
