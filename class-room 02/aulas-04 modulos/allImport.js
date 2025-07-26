@@ -7,4 +7,8 @@ function subtraction(a, b) {
 }
 
 // Exportando no final.
-export {division, subtraction}
+export {division}
+
+
+// Renomeando as Exportações.
+export {subtraction as subtractionTwoNumbers}
