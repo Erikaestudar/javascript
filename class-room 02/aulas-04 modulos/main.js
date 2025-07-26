@@ -1,11 +1,15 @@
-// Importação seletiva.
-import {sum, multiply} from "./calc.js"
+// Com a exportação padrão não é necessário o uso de chaves.
+import sum, {multiply} from "./calc.js" 
+
+
+// Importação nomeada.
+//import {multiply} from "./calc.js"
 
 console.log("4 + 6 =", sum(4, 6))
 console.log("4 * 6 =", multiply(4, 6))
 
 
-// Impotando todas as funções.
+// Importando todas as funções.
 import * as math from "./allImport.js"
 
 console.log("24 / 6 =", math.division(24, 6))
