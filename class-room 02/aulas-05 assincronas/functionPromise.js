@@ -10,7 +10,8 @@
 function asyncFunction() {
     return new Promise((resolve, reject) => {
        // Simula uma operação assíncrona.
-        setTimeout(() => {true
+        setTimeout(() => {
+            const isSuccess = true
 
             if (isSuccess) {
                 resolve("A operação foi concluída com sucesso!")
