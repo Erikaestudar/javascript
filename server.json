@@ -1,8 +1,29 @@
 {
-    "products": [
-        {"id": "1", "name": "Mouse", "price": 150.25},
-        {"id": "2", "name": "Teclado", "price": 90.00},
-        {"id": "3", "name": "Monitor", "price": 500.00}
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "Mouse",
+      "price": 150.25
+    },
+    {
+      "id": "2",
+      "name": "Teclado",
+      "price": 90
+    },
+    {
+      "id": "3",
+      "name": "Monitor",
+      "price": 500
+    },
+    {
+      "id": "1755032129569",
+      "name": "Microfone",
+      "price": "200"
+    },
+    {
+      "id": "1755032162185",
+      "name": "Mesa gamer",
+      "price": "1500"
+    }
+  ]
 }
-
