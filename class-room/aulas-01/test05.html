@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="creditCard">Credit Card Number:</label>
+        <input type="text" id="creditCard" name="creditCard" placeholder="XXXX-XXXX-XXXX-XXXX">
+
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset" id="limpar">Limpar</button>
+    </form>
+        <p>resultado:</p>
+        <span></span>
+
+    <script>
+        const input = document.getElementById("creditCard")
+        const form = document.querySelector("form")
+        const btn = document.querySelector("#enviar")
+        const reset = document.querySelector("#limpar")
+
+        const res = document.querySelector("span")
+
+        reset.onclick = () => {
+            res.textContent = ""
+        }
+        
+
+        function hideNumber(number) {
+            const value = number.value
+            const lastDigits = value.slice(-4)
+            const maskedNum = lastDigits.padStart(value.length, "X")
+
+            const formatted = maskedNum.replace(/(.{4})/g, "$1-").replace(/-$/,"")
+
+            return formatted
+        }
+
+        function isValidLuhn(number) {
+            let digits = number.replace(/\D/g,"")
+            let sum = 0
+            let shouldDouble = false
+
+            for (let i = digits.length -1; i >= 0; i--) {
+                let digit = Number(digits[i])
+
+                if (shouldDouble) {
+                    digit *= 2
+                    if (digit > 9) digit -= 9 // regra do Luhn
+                }
+
+                sum += digit
+                shouldDouble = !shouldDouble
+            }
+            return sum % 10 === 0
+        }
+
+        form.onsubmit = (event) => {
+            event.preventDefault()
+
+            const cardNumberOnlyDigits = input.value.replace(/\D/g, "")
+
+            if (isValidLuhn(cardNumberOnlyDigits)) {
+                alert("Cartão válido ✔, compra aprovada!")
+                res.textContent = hideNumber(input)
+                input.value = ""
+                input.focus()
+            } else {
+                alert("Cartão inválido ❌. Insira os dados corretamente.")
+                input.value = ""
+                input.focus()
+            }
+        }
+    </script>
+</body>
+</html>
