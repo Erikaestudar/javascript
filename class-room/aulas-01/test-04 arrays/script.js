@@ -59,9 +59,12 @@ form.addEventListener("submit", (event) => {
             let taskName = document.createElement("p")
             taskName.classList.add("task-name")
 
+            let del = document.createElement("span")
+            del.classList.add("delete")
+
             taskName.textContent = join
 
-            newItem.appendChild(taskName)
+            newItem.append(taskName, del)
  
             list.appendChild(newItem)
             list.classList.add("show-tasks")
