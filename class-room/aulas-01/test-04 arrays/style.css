@@ -64,24 +64,23 @@ div.list-wrapper {
     margin-block: 2rem;
 }
 
-span {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
 ul.list {
     list-style: none;
     margin-block: 1.5rem;
 }
 
 .list li {
-    padding: .5rem .75rem;
+    padding: .5rem;
     margin-bottom: .5rem;
     border-radius: .5rem;
     background-color: #ffebc69a;
     display: flex;
     align-items: center;
     gap: .5rem;
+}
+
+.list li p {
+    max-width: 60rem;
 }
 
 .list li.checked p {
